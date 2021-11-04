@@ -9,11 +9,16 @@ There's an alternative option: the bitnami/minio but it is VERY slow to start, s
 ## Usage
 
 ```yaml
-services:
-    minio:
-    image: fclairamb/minio-github-actions
-    ports:
-        - 9000:9000
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    services:
+      minio:
+        image: fclairamb/minio-github-actions
+        ports:
+          - 9000:9000
+    steps:
+      - run: curl -v http://minio:9000
 ```
 
 
