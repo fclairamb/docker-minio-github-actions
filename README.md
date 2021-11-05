@@ -21,7 +21,7 @@ jobs:
         ports:
           - 9000:9000
     steps:
-      - run: curl -v http://minio:9000
+      - run: curl -v http://127.0.0.1:9000
 ```
 
 
