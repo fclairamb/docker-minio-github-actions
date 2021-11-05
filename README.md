@@ -12,6 +12,9 @@ There's an alternative option: the bitnami/minio but it is VERY slow to start, s
 jobs:
   example:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadmin
     services:
       minio:
         image: fclairamb/minio-github-actions
